@@ -1,0 +1,81 @@
+============================================================
+  DOCTOR'S APPOINTMENT SYSTEM - PROMPT LOG
+  Project: /home/parth/Other Files/programs/hacketon
+============================================================
+
+PROMPT #1
+Timestamp: 2026-03-12 22:23:38 IST
+-----------------------------------------------------------
+Doctor's Appointment & Scheduling System
+Challenge Statement
+Running a doctor's clinic is operationally exhausting for the receptionist. Every day they manage
+a flood of appointment requests over phone calls and walk-ins, manually check the doctor's
+availability, avoid double bookings by memory or a physical register, send reminders by calling
+each patient individually, handle cancellations and reschedule requests, and somehow keep the
+doctor's daily schedule clean and organised. When mistakes happen and they do, a patient
+shows up at the same time as another, the doctor is left waiting between gaps nobody filled, or a
+cancellation never gets communicated. There is no single system that a clinic of any size can
+open on a browser, use without training, and trust to keep everything organised automatically.
+
+Requirements
+Build a fully deployed full-stack web application that acts as the single operating system for a
+doctor's clinic, handling everything from appointment booking to schedule management without
+any manual effort. Include proper authentication with different access levels for the receptionist
+and the doctor, plus a real database so all appointment data remains intact. Implement
+scheduling logic that automatically prevents appointment clashes and design complete booking,
+cancellation, rescheduling, and role-based user flows creatively
+
+Build me the website based on the context & technologies mentioned
+
+Technologies:
+Frontend - React, Tailwind CSS
+Backend - Node.js, Express.js
+Database - MongoDB or Firebase
+Authentication - JWT or Firebase Auth
+
+
+PROMPT #2
+Timestamp: 2026-03-12 22:24:04 IST
+-----------------------------------------------------------
+now build
+
+
+PROMPT #3
+Timestamp: 2026-03-12 22:30:26 IST
+-----------------------------------------------------------
+1. sure that the api's is not stored on front-end (use .env)
+2. Implement validation for every input in website
+
+
+PROMPT #4
+Timestamp: 2026-03-12 22:53:39 IST
+-----------------------------------------------------------
+is the project running ?
+
+
+PROMPT #5
+Timestamp: 2026-03-12 23:14:55 IST
+-----------------------------------------------------------
+rectify all the errors within the project, make it running without any errors
+
+
+PROMPT #6
+Timestamp: 2026-03-12 23:30:22 IST
+-----------------------------------------------------------
+what's the username & password for the sign in screen ?
+
+
+PROMPT #7
+Timestamp: 2026-03-12 23:46:24 IST
+-----------------------------------------------------------
+guide me step by step how to rectify the mongo db problem
+
+
+PROMPT #8
+Timestamp: 2026-03-12 23:54:56 IST
+-----------------------------------------------------------
+prepare a .txt file (in the main hacketon directory) about all the prompts that i given to you, from start to finish along with the timestamps of each prompt
+
+============================================================
+  END OF PROMPT LOG
+============================================================
