@@ -1,5 +1,5 @@
 ============================================================
-  DOCTOR'S APPOINTMENT SYSTEM - PROMPT LOG
+  CLINIC OS - COMPLETE PROMPT LOG
   Project: /home/parth/Other Files/programs/hacketon
 ============================================================
 
@@ -75,6 +75,135 @@ PROMPT #8
 Timestamp: 2026-03-12 23:54:56 IST
 -----------------------------------------------------------
 prepare a .txt file (in the main hacketon directory) about all the prompts that i given to you, from start to finish along with the timestamps of each prompt
+
+
+PROMPT #9
+Timestamp: 2026-03-13 11:43:46 IST
+-----------------------------------------------------------
+i want the receptionist dashboard & doctor dashboard to be accessable simultaneously, on different localhost ports,(meaning 2 tabs in browser, one for doctor & another one for receptionist dashboard) also updates/adding appointment done on receptionist dashboard, it should also be updated on doctor dashboard in real time
+
+
+PROMPT #10
+Timestamp: 2026-03-13 11:50:15 IST
+-----------------------------------------------------------
+1. now make a different screen for the user(patient)  like a normal website for a example clinic/hospital, where it would advertise the hospital like any other website, just like the given image, change the hospital name to any you(randomly).
+2. Up in the header of the website, add a booking button which will redirect to the form filling page where the user will input this information like (Name, Phone no, Email, Type of Problem the Patient/Disease, Additional comments like algeries).
+
+
+PROMPT #11
+Timestamp: 2026-03-13 12:05:30 IST
+-----------------------------------------------------------
+After the user has submitted the form , immediatelty/dynamically at the receptionist dashboard, there should a confirmation dialog box for the receptionist to confirm or deny the booking (manual intervention before the booking slot is updated to doctor & receptionist dashboard).
+After that remove the manual time slot allocation of the patient's booking, & it should automatically allocate +30min after the previous patient's time slot. (in the receptionist dashboard  in the confirmation dialog box)
+
+
+PROMPT #12
+Timestamp: 2026-03-13 12:20:45 IST
+-----------------------------------------------------------
+there's a error when starting the server
+error :
+Connected to MongoDB
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+
+
+PROMPT #13
+Timestamp: 2026-03-13 12:35:10 IST
+-----------------------------------------------------------
+when i open the patient page, it shows me the login screen of the other pages, i want it to display webiste of hospital where the user would go to the booking tab to fill the form
+
+
+PROMPT #14
+Timestamp: 2026-03-13 12:45:22 IST
+-----------------------------------------------------------
+close all the earlier ports
+
+
+PROMPT #15
+Timestamp: 2026-03-13 13:00:11 IST
+-----------------------------------------------------------
+the doctor & receptionist dashboard is broken, it's showing blank page & the login page is not visible.
+rectify the error
+
+
+PROMPT #16
+Timestamp: 2026-03-13 13:16:12 IST
+-----------------------------------------------------------
+kill the previous open ports
+
+
+PROMPT #17
+Timestamp: 2026-03-13 13:20:08 IST
+-----------------------------------------------------------
+the receptionist page problem is solved but the doctor page is still broken. please rectify then confirm 
+
+
+PROMPT #18
+Timestamp: 2026-03-13 13:26:52 IST
+-----------------------------------------------------------
+now guide me step by step to implement Exotel service to send message to patient's phone number when the patient submits the form in patient page
+
+
+PROMPT #19
+Timestamp: 2026-03-13 13:30:36 IST
+-----------------------------------------------------------
+how to obtain sender id
+
+
+PROMPT #20
+Timestamp: 2026-03-13 13:42:57 IST
+-----------------------------------------------------------
+drop the sms feature, 
+1. now add feature to doctor dashboard, during paitent & doctor interaction in real world, the doctor dynamically notes down the prescription required for the patient.
+in description the doctor will select the patient, then the selected should be put in a queue (ongoin progress interaction with doctor), it should show as 'this patient is in queue' and it should reflect on both the pages.
+2. When the doctor is interacting with patient (the particular patient in queue), the doctor will type down the required prescription in a list to the specify patient (like normal notes as prescription)
+3. Then after the interaction is done, the doctor will the end interaction with patient (remove from the queue) the prescription list the doctor made should be proper formated & send to receptionist. & at the receptionist page, after the appointment of the patient is done, beside the re-schedule option of patient box, add a download buttion to download the prescription list send by the doctor via doctor dashboard.
+4 Last feature, make all the data of database persistent
+
+
+PROMPT #21
+Timestamp: 2026-03-13 13:51:07 IST
+-----------------------------------------------------------
+same issue as earlier the pages are not loading, rectify it
+
+
+PROMPT #22
+Timestamp: 2026-03-13 13:53:22 IST
+-----------------------------------------------------------
+close all the ports
+
+
+PROMPT #23
+Timestamp: 2026-03-13 13:53:51 IST
+-----------------------------------------------------------
+point to the mongodb database & where it is stored 
+
+
+PROMPT #24
+Timestamp: 2026-03-13 13:54:51 IST
+-----------------------------------------------------------
+the doctor & receptionist pages are still broken please rectify it
+
+
+PROMPT #25
+Timestamp: 2026-03-13 14:00:45 IST
+-----------------------------------------------------------
+the receptionist is not opening
+
+
+PROMPT #26
+Timestamp: 2026-03-13 14:12:47 IST
+-----------------------------------------------------------
+see the main problem right now with the receptionist page that (see in the given image), it says access denied, even though i am starting the receptionist page seperatly, only rectify the error & kill all the previously opened ports, don't start the servers
+
+
+PROMPT #27
+Timestamp: 2026-03-13 20:20:55 IST
+-----------------------------------------------------------
+prepare a .txt file which should contain all the prompts (including yesterday's) from start to end with timestamps
 
 ============================================================
   END OF PROMPT LOG
