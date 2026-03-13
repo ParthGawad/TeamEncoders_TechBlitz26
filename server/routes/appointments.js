@@ -40,6 +40,10 @@ router.post('/', auth, [
     const appointment = new Appointment({ patientName, contact, date, timeSlot });
     await appointment.save();
 
+    // Emit real-time event
+    const io = req.app.get('io');
+    io.emit('appointment:created', appointment);
+
     res.status(201).json(appointment);
   } catch (err) {
     if (err.code === 11000) {
@@ -83,6 +87,11 @@ router.put('/:id', auth, [
     );
     
     if (!appointment) return res.status(404).json({ message: 'Appointment not found' });
+
+    // Emit real-time event
+    const io = req.app.get('io');
+    io.emit('appointment:updated', appointment);
+
     res.json(appointment);
   } catch (err) {
     if (err.code === 11000) {
@@ -101,7 +110,57 @@ router.delete('/:id', auth, async (req, res) => {
       { new: true }
     );
     if (!appointment) return res.status(404).json({ message: 'Appointment not found' });
+
+    // Emit real-time event
+    const io = req.app.get('io');
+    io.emit('appointment:cancelled', appointment);
+
     res.json({ message: 'Appointment cancelled successfully', appointment });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error', error: err.message });
+  }
+});
+
+// Start consultation — put patient in queue
+router.put('/:id/start-consultation', auth, async (req, res) => {
+  try {
+    const appointment = await Appointment.findByIdAndUpdate(
+      req.params.id,
+      { inQueue: true },
+      { new: true }
+    );
+    if (!appointment) return res.status(404).json({ message: 'Appointment not found' });
+
+    const io = req.app.get('io');
+    io.emit('queue:updated', appointment);
+
+    res.json(appointment);
+  } catch (err) {
+    res.status(500).json({ message: 'Server error', error: err.message });
+  }
+});
+
+// End consultation — save prescription, complete appointment
+router.put('/:id/end-consultation', auth, async (req, res) => {
+  try {
+    const { prescription } = req.body;
+
+    const appointment = await Appointment.findByIdAndUpdate(
+      req.params.id,
+      { 
+        inQueue: false, 
+        status: 'completed', 
+        prescription: prescription || [] 
+      },
+      { new: true }
+    );
+    if (!appointment) return res.status(404).json({ message: 'Appointment not found' });
+
+    const io = req.app.get('io');
+    io.emit('queue:updated', appointment);
+    io.emit('appointment:updated', appointment);
+
+    res.json(appointment);
   } catch (err) {
     res.status(500).json({ message: 'Server error', error: err.message });
   }

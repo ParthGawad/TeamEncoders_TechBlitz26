@@ -22,6 +22,14 @@ const AppointmentSchema = new mongoose.Schema({
     enum: ['scheduled', 'completed', 'cancelled'],
     default: 'scheduled',
   },
+  inQueue: {
+    type: Boolean,
+    default: false,
+  },
+  prescription: {
+    type: [String],
+    default: [],
+  },
 }, { timestamps: true });
 
 // Ensures that no two scheduled appointments share the same date and time slot
